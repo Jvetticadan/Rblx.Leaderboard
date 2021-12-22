@@ -1,7 +1,0 @@
-local MatchManager = {}
- 
-function MatchManager.prepareGame()
-print("Game starting!")
-end
- 
-return MatchManager
