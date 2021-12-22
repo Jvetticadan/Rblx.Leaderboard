@@ -1,0 +1,14 @@
+local MatchManager = {}
+ 
+-- Services
+local ServerStorage = game:GetService("ServerStorage")
+ 
+-- Module Scripts
+local moduleScripts = ServerStorage:WaitForChild("ModuleScripts")
+local playerManager = require(moduleScripts:WaitForChild("PlayerManager"))
+ 
+function MatchManager.prepareGame()
+playerManager.sendPlayersToMatch()
+end
+ 
+return MatchManager
