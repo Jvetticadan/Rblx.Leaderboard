@@ -1,9 +1,0 @@
-local GameSettings = {}
- 
--- Game Variables
-GameSettings.intermissionDuration = 5
-GameSettings.roundDuration = 10
-GameSettings.minimumPlayers = 2
-GameSettings.transitionTime = 5
- 
-return GameSettings
