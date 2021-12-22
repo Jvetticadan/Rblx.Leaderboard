@@ -1,0 +1,21 @@
+-- Services
+local ServerStorage = game:GetService("ServerStorage")
+local Players = game:GetService("Players")
+ 
+-- Module Scripts
+local moduleScripts = ServerStorage:WaitForChild("ModuleScripts")
+local matchManager = require(moduleScripts:WaitForChild("MatchManager"))
+local gameSettings = require(moduleScripts:WaitForChild("GameSettings"))
+ 
+-- Main game loop
+while true do
+repeat
+print("Starting intermission")
+wait(gameSettings.intermissionDuration)
+until Players.NumPlayers >= gameSettings.minimumPlayers
+ 
+print("Intermission over")
+wait(gameSettings.transitionStart)
+ 
+matchManager.preparePlayers()
+end
