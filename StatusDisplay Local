@@ -1,0 +1,12 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local displayValues = ReplicatedStorage:WaitForChild("DisplayValues")
+local status = displayValues:WaitForChild("Status")
+ 
+local textLabel = script.Parent
+ 
+local function updateText()
+textLabel.Text = status.Value
+end
+ 
+status.Changed:Connect(updateText)
+updateText()
